@@ -42,7 +42,7 @@ paginate = 10
     # Metadata used to drive integrations.
     googleAuthorship = "Your Google+ profile ID"
     googleAnalytics = "UA-64429204-1"
-    gravatarHash = "ca3e9d9597f24b90bac08bf3e08a1eb4"
+    gravatarHash = "29bea2982cf098795915166d7a907376"
 
     # Sidebar social links, these must be full URLs.
     github = "http://github.com/cosyman"
