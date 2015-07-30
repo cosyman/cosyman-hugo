@@ -12,8 +12,8 @@
 
 .sidebar-about img {
   margin: 0 auto 0.5rem auto;
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
 }
 @media (min-width: 48em) {
   .sidebar-about img {

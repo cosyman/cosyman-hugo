@@ -35,10 +35,11 @@ SectionPagesMenu = "main"
     # See below for more colour options.
     # This also works: "theme-base-08 layout-reverse", or just "layout-reverse".
     theme = ""
+    truncate = false
 
     # Select a syntax highight.
     # Check the static/css/highlight directory for options.
-    highlight = "idea"
+    highlight = "default"
 
     # Displays under the author name in the sidebar, keep it short.
     # You can use markdown here.
@@ -52,6 +53,6 @@ SectionPagesMenu = "main"
     # Sidebar social links, these must be full URLs.
     github = "http://github.com/cosyman"
     linkedin = "https://www.linkedin.com/in/blueskyyao"
-    googleplus = ""
+    googleplus = "106762087260771841123"
     facebook = ""
     twitter = "https://twitter.com/bluesky_yao"
