@@ -16,27 +16,25 @@ Page Object定义为抽象web app页面的一系列对象，通过对页面功�
 * 减少重复代码
 * 提高测试代码的可读性和稳定性
 * 测试代码易于维护
-
+<!--more-->
 ## 一个简单的例子
 
 ```java
 public class BaiduSearchPage {
 
 	protected WebDriver driver;
-        @FindBy(id="kw")
+  @FindBy(id="kw")
 	private WebElement kw;
 	private WebElement su;
 
 	public BaiduSearchPage(WebDriver driver) {
 		super();
 		this.driver = driver;
-                PageFactory.initElements(driver, this);
+    PageFactory.initElements(driver, this);
 	}
-
 	public void load(String url) {
 		driver.get(url);
 	}
-
 	public ResultPage search(String key) {
 		kw.clear();
 		kw.sendKeys(key);
@@ -45,6 +43,7 @@ public class BaiduSearchPage {
 	}
 }
 ```
+
 ## 推荐的做法
 
 * public 方法暴露Page对象的服务
@@ -86,10 +85,10 @@ public static void untilElementVisable(final WebElement element,int timeoutInSec
 在Appium中你会遇到，Selendroid模式和UIAutomator定位差异，比如Selendroid的linkText在UIAutomator中用name,还有就是iOS脚本想和Android共用一份。这在Appium中有了很好的扩充，Appium客户端会在运行时决定使用哪个Annotation来装饰WebElement。
 
 ```java
-    @FindBy(name="text")
-    @SelendroidFindBy(name = "text1")
-    @iOSFindBy(id="sth")
-    private WebElement textSelendroid;
+@FindBy(name="text")
+@SelendroidFindBy(name = "text1")
+@iOSFindBy(id="sth")
+private WebElement textSelendroid;
 ```
 
 ## ElementInterceptor
