@@ -19,7 +19,7 @@ Build体系中包括Build平台，Build工具，Build脚本，大量散乱多Bui
 
 现代Build系统，repo 分享的舞台，中转站，生产与消费，依赖关系图，有向无环图。
 
-![](/images/devops/deg.png)
+![](https://raw.githubusercontent.com/cosyman/cosyman-hugo/master/static/images/devops/deg.png)
 
 ## SCM
 
@@ -82,12 +82,13 @@ Build体系中包括Build平台，Build工具，Build脚本，大量散乱多Bui
 
 1. SCM项目源码依赖-->SCM目录依赖-->SCM文件依赖 中间仓库，源码以来意味着依赖的交付为源码，JDK的开发中比如jshell，http2
 2. BuildScript过重，没有转给开发，Build Engineer的出现
-3.
+
 
 ## Develop Build Tool
 
 1. Build 是严肃的，稳定
 2. Build 应该被合理的组织
+
 
 ## References
 
