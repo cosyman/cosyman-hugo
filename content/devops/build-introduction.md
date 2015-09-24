@@ -66,18 +66,10 @@ Build体系中包括Build平台，Build工具，Build脚本，大量散乱多Bui
 是一种标准，比如Java中war，ear等，它可以帮助吧约定胜于配置的理念发挥到极致，同时Lifecycle
 也通常意味着不变，对于灵活性
 
-## Task/Goal
+## Task Graph/Goal
 
 同样对于Task也应是一种有向无环图，这在Gradle Gulp等工具中显得特别重要
 
-
-Compiling[compiling] computer Source_code[source code] into Binary_code[binary code]
-
-Software_package_(installation)[packaging] Binary_code[binary code]
-
-Test_automation[automated tests]
-
-Software_deployment[deploying] to production systemcreating documentation and/or Release_notes[release notes]
 
 ## Best Practices
 
@@ -92,11 +84,18 @@ Software_deployment[deploying] to production systemcreating documentation and/or
 2. BuildScript过重，没有转给开发，Build Engineer的出现
 3.
 
+## Develop Build Tool
+
+1. Build 是严肃的，稳定
+2. Build 应该被合理的组织
+
 ## References
 
 https://en.wikipedia.org/wiki/List_of_software_package_management_systems
 
 [Overview of  Build](http://www.cs.virginia.edu/~dww4s/articles/build_systems.html)
+
+[淘宝Maven培训](http://www.open-open.com/doc/view/4058453cde4b429c82ff2807d8aa81f0)
 
 http://devops.com/2014/07/29/continuous-delivery-pipeline/
 
