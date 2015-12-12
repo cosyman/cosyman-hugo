@@ -185,5 +185,4 @@ README.txt	| Project's readme
 
 [理解Maven依赖调解](http://guntherpopp.blogspot.com/2011/02/understanding-maven-dependency.html)
 
-[比较好的Maven培训PPT](http://wenku.baidu.com/link?url=Xxvo2Zvgjh5HmsEajQv-rJbwE-hsNHXNQ06Zo0_nG7nMzS2ZsemR5Tvb48woSkHEaOgqw7x8sEQ8yom9iW5gCWKDNt6jbSpTki_cQbwcb0m
-)
+[比较好的Maven培训PPT](http://wenku.baidu.com/link?url=Xxvo2Zvgjh5HmsEajQv-rJbwE-hsNHXNQ06Zo0_nG7nMzS2ZsemR5Tvb48woSkHEaOgqw7x8sEQ8yom9iW5gCWKDNt6jbSpTki_cQbwcb0m)

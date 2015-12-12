@@ -38,6 +38,7 @@ title = "纪念好友朱全"
 2015年1月16日
 
 >九华山之旅圆满完成
+
 ![](/images/life/xiaoquan.jpg)
 
 

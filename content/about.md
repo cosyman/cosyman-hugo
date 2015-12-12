@@ -5,5 +5,4 @@ description = ""
 keywords = []
 title = "about"
 
-draft = true
 +++

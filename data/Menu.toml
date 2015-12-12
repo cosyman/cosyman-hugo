@@ -1,0 +1,13 @@
+[about]
+    Name = "About"
+    URL = "/about"
+
+[posts]
+    Name = "Posts"
+    Title = "Show list of posts"
+    URL = "/post"
+
+[categories]
+  Name = "Categories"
+  Title = "Show list of topics"
+  URL = "/categories"

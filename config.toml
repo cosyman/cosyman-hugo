@@ -1,49 +1,48 @@
 baseurl = "http://cosyman.github.io/"
-title = "技术&生活"
-languageCode = "en-us"
-disqusShortname = "cosyman" # Optional, enable Disqus integration
-MetaDataFormat = "toml"
-theme = "hyde-x"
-paginate = 10
+#baseurl = "http://localhost:1313/"
 
-SectionPagesMenu = "main"
+title = "兰天"
+
+languageCode = "zh-cn"
+disqusShortname = "cosyman" # Optional, enable Disqus integration
+metaDataFormat = "toml"
+
+theme = "hyde-y"
+
+
+paginate = 10
+paginatePath = "page"
 
 [author]
     name = "兰天"
+    email = "cosman@outlook.com"
 
 [permalinks]
     # Optional. Change the permalink format for the 'post' content type.
     # The format shown here is the same one Jekyll/Octopress uses by default.
-    post = "/blog/:year/:month/:day/:title/"
-    devops = "/blog/:year/:month/:day/:title/"
-    java = "/blog/:year/:month/:day/:title/"
-    life = "/blog/:year/:month/:day/:title/"
+    post = "/blog/:year/:month/:title/"
 
-[indexes]
+[taxonomies]
     # Optional. Use if you want tags and lists.
-    category = "categories"
+    tag = "keywords"
+    topic = "categories"
 
 #
 # All parameters below here are optional and can be mixed and matched.
 #
 [params]
     # Used when a given page doesn't set its own.
-    defaultDescription = "Your default page description"
     defaultKeywords = "cosyman,bluesky,兰天"
 
-    # Changes sidebar background and link/accent colours.
-    # See below for more colour options.
-    # This also works: "theme-base-08 layout-reverse", or just "layout-reverse".
-    theme = ""
-    truncate = true
+    sidebar = "left"
+
+    # Text for the top menu link, which goes the root URL for the site.
+    # Default (if omitted) is "Home".
+    home = "Home"
 
     # Select a syntax highight.
     # Check the static/css/highlight directory for options.
     highlight = "default"
-
-    # Displays under the author name in the sidebar, keep it short.
-    # You can use markdown here.
-    tagline = "优雅的活着"
 
     # Metadata used to drive integrations.
     googleAuthorship = "remotejavasky"
@@ -51,8 +50,17 @@ SectionPagesMenu = "main"
     gravatarHash = "29bea2982cf098795915166d7a907376"
 
     # Sidebar social links, these must be full URLs.
-    github = "http://github.com/cosyman"
-    linkedin = "https://www.linkedin.com/in/blueskyyao"
-    googleplus = "106762087260771841123"
+    github = "cosyman"
+    linkedin = "blueskyyao"
+    #googleplus = "106762087260771841123"
     facebook = ""
-    twitter = "https://twitter.com/bluesky_yao"
+    twitter = "bluesky_yao"
+
+[blackfriday]
+    angledQuotes = true
+    fractions = false
+    hrefTargetBlank = false
+    latexDashes = true
+    plainIdAnchors = true
+    extensions = []
+    extensionmask = []
