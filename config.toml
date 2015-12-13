@@ -15,7 +15,7 @@ paginatePath = "page"
 
 [author]
     name = "兰天"
-    email = "cosman@outlook.com"
+    email = "cosyman@outlook.com"
 
 [permalinks]
     # Optional. Change the permalink format for the 'post' content type.

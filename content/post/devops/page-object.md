@@ -7,15 +7,14 @@ title = "Page Object Pattern"
 
 +++
 
-移动UI自动化，看起来美好，践行起来却难。做个目光短见的务实主义者。Page Objects Pattern是Selenium官方推崇的方式，最近研究写测试用例最佳实践之Page Objects，同时结合Appium的Java Client简单介绍下如何写出靠谱的Page Object。
+移动UI自动化，看起来美好，践行起来却难。做个目光短见的实主义者。Page Objects Pattern是Selenium官方推崇的方式，最近研究写测试用例最佳实践之Page Objects，同时结合Appium的Java Client简单介绍下如何写出靠谱的Page Object。
 
-## Page Objects
-
-Page Object定义为抽象web app页面的一系列对象，通过对页面功能的封装，它得到了很多好处：
+Page Object定义为抽象web app页面的一系列对象，通过对UI界面的抽象，它拥有很多好处：
 
 * 减少重复代码
 * 提高测试代码的可读性和稳定性
 * 测试代码易于维护
+* UI元素的定位和具体实现分离，如Android，iOS的一套脚本实现
 <!--more-->
 ## 一个简单的例子
 
@@ -23,7 +22,7 @@ Page Object定义为抽象web app页面的一系列对象，通过对页面功�
 public class BaiduSearchPage {
 
 	protected WebDriver driver;
-  @FindBy(id="kw")
+	@FindBy(id="kw")
 	private WebElement kw;
 	private WebElement su;
 
@@ -46,20 +45,20 @@ public class BaiduSearchPage {
 
 ## 推荐的做法
 
-* public 方法暴露Page对象的服务
+* public方法暴露Page对象的服务
 * WebElement,Driver相关页面UI细节尽可能隐藏
 * 尽量减少Page对象中的Assertion
-* 到达新的Page，在方法中返回其它Page,甚至同一页面也可以返回Page做链式操作
-* 一个Page对象不需要关注所有细节，只关心需要的对象，需要时再补充
+* 在方法中返回新的Page,甚至在同一页面也可以返回Page做链式操作
+* 一个Page对象不需要关注所有细节，只关心需要的UI元素，需要时再补充
 * 不同的结果，同一个操作可以用不同的方法。
 
 ## Appium 中使用Page Object Pattern
 
-Appium的Java Client是基于WebDriver的，但有了一些改进。比如元素定位不到，Appium Java Client会将Locator详细信息抛出，而Selenium没有。
+Appium的Java Client是基于WebDriver的，但有了一些改进。比如元素定位不到时，它会将Locator详细信息抛出，而Selenium没有。
 
 ## Wait
 
-移动自动化测试Wait是很关键的一个动作，既关乎正确性，也关乎效率，我们应该极力避免使用Thread.sleep()或Sleeper.sleepTight()。Appium的客户端提供了一个类AppiumFieldDecorator可以很方便的设置ImplicitlyWaitTimeOut。FieldDecorator顾名思义，是Page对象Field的Decorator，PageFactory主要就是在Feild上下功夫，将WebElement类型的Feild使用Proxy方法，创建一个增强的WebElement,这个成员在每次操作时，都会先使用注解的定位策略定位，然后再调用WebElement的方法，当然可以通过CacheLookup注解，来缓存定位结果（尽量不这么做)。
+移动自动化测试Wait是很关键的一个动作，既关乎正确性，也关乎效率，我们应该极力避免使用Thread.sleep()或Sleeper.sleepTight()。Appium的客户端提供了一个类AppiumFieldDecorator可以很方便的设置ImplicitlyWaitTimeOut。FieldDecorator顾名思义，是Page对象Field的Decorator，PageObject的精髓就是在Feild上下功夫，将WebElement类型的Feild动态Proxy为一个增强的WebElement,这个成员在每次操作时，都会先使用注解的定位策略定位，然后再调用WebElement的方法，当然可以通过CacheLookup注解，来缓存定位结果。
 
 ```java
 PageFactory.initElements(new AppiumFieldDecorator(driver, 5, TimeUnit.SECONDS), pageObject);
@@ -72,7 +71,7 @@ public static void untilElementVisable(final WebElement element,int timeoutInSec
   new Wait() {
      @Override
      public boolean until() {
-	return element.isDisplayed();
+		return element.isDisplayed();
      }
    }.wait(String.format("Timed out waiting for %s. Waited %s",
 		  element, timeoutInSeconds), timeoutInSeconds);

@@ -7,11 +7,11 @@ title = "Build系统介绍"
 
 +++
 
->好的IDE做Build工具的Wrapper，Build平台也应只做Build工具的Wrapper，大量散乱的Build脚步应被组织起来，演变为Build工具
+>好的IDE做Build工具的Wrapper，Build平台也应只做Build工具的Wrapper，大量散乱的Build脚本应被组织起来，演变为Build工具
 
 ## 10000公里俯瞰Build
 
-Build体系中包括Build平台，Build工具，Build脚本，大量散乱多Build脚本，只会导致各种Build工程师的产生，它应进化为一种Build工具。而Build平台可以最大力度的发挥Build工具的能力，至于Build脚本，交给用户(开发)吧，只有他们有责任和欲望演进构建的脚步，我们应致力于Build平台体验和好的构建根据的引入与研发。
+Build体系中包括Build平台，Build工具，Build脚本，大量散乱多Build脚本，只会导致各种Build工程师的产生，它应进化为一种Build工具。而Build平台可以最大力度的发挥Build工具的能力，至于Build脚本，交给用户(开发者)吧，只有他们有责任和欲望演进构建的脚本代码，我们应致力于Build平台体验和构建工具的引入与研发。
 
 现代Build系统,构建分享的舞台，中转站，生产与消费，依赖关系图，有向无环Task图。
 
@@ -27,7 +27,7 @@ Build体系中包括Build平台，Build工具，Build脚本，大量散乱多Bui
 ## Profile
 
 1. 平台的独立性
-2.不同的调料,当发现api传递很多参赛时，应该考虑这些参数是否需要暴露，是否是开放决定的，然后分组，暴露profile
+2. 不同的调料,当发现api传递很多参赛时，应该考虑这些参数是否需要暴露，是否是开放决定的，然后分组，暴露profile
 
 ## Script/DSL
 
