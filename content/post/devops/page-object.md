@@ -96,9 +96,9 @@ private WebElement textSelendroid;
 
 ## 参考
 
-http://assertselenium.com/automation-design-practices/page-object-pattern/
-https://code.google.com/p/selenium/wiki/LoadableComponent
-https://code.google.com/p/selenium/wiki/PageObjects
-https://code.google.com/p/selenium/wiki/PageFactory
-https://github.com/FluentLenium/FluentLenium
-https://github.com/countableSet/webdriver-demo
+- http://assertselenium.com/automation-design-practices/page-object-pattern
+- https://code.google.com/p/selenium/wiki/LoadableComponent
+- https://code.google.com/p/selenium/wiki/PageObjects
+- https://code.google.com/p/selenium/wiki/PageFactory
+- https://github.com/FluentLenium/FluentLenium
+- https://github.com/countableSet/webdriver-demo
