@@ -4,4 +4,4 @@
 
 [submodule "hyde-y"]
 	path = themes/hyde-y
-	url = git@github.com:enten/hyde-y.git
+	url = git@github.com:cosyman/hyde-y.git

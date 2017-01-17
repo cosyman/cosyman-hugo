@@ -1,6 +1,19 @@
-# cosyman.github.io
-to be my personal blog
+## cosyman.github.io
+
+To be my personal blog
+
+Publish
 
 ```bash
-$ hugo server --baseUrl=http://cosyman.github.io --port=80 --appendPort=false --bind=172.0.0.1
+hugo server --baseUrl=http://cosyman.github.io --port=1313 --appendPort=false --bind=0.0.0.0
+```
+
+## init
+
+```bash
+git clone
+git submodule init
+git submodule update
+
+# Push to submodule seprately
 ```
