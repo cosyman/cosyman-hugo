@@ -1,5 +1,5 @@
-baseurl = "http://cosyman.github.io/"
-#baseurl = "http://localhost:1313/"
+# baseurl = "http://cosyman.github.io/"
+baseurl = "http://localhost:1313/"
 
 title = "兰天"
 
