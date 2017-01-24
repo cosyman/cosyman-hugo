@@ -16,6 +16,7 @@ Page Object定义为抽象web app页面的一系列对象，通过对UI界面的
 * 测试代码易于维护
 * UI元素的定位和具体实现分离，如Android，iOS的一套脚本实现
 <!--more-->
+
 ## 一个简单的例子
 
 ```java
